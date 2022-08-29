@@ -1,0 +1,37 @@
+.login-space-line {
+  margin: 10px auto;
+  background-color: #08d765;
+  width: 90%;
+  height: 1px;
+}
+
+.login-button input {
+  border: 1px solid #0062cc;
+  background: transparent;
+  padding: 10px 5px;
+  color: rgb(138, 133, 133);
+  border-radius: 20px;
+  width: 60%;
+}
+
+.login-button {
+  text-align: center;
+  width: 100%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+.Wallet_Button button {
+  cursor: pointer;
+  background-color: #00ffe9;
+  color: #fff;
+  font-size: 1.15em;
+  border: none;
+  border-radius: 20px;
+  width: auto;
+  padding: 1rem 3rem;
+  transition: 0.8s;
+  font-weight: 600;
+}
+.sinIn_alreadyRe {
+  color: #08d765 !important;
+}

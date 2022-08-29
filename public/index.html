@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="https://dashboard.decentralizedluxurytoken.com/login"
+    />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/favicon.ico" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <title>ChargeV2 Exchange</title>
+    <!--Include Links-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,700"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/animate.min.css" />
+    <link rel="stylesheet" href="css/flipclock.css" />
+    <link rel="stylesheet" href="css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="css/owl.theme.default.min.css" />
+    <link rel="stylesheet" href="css/dark.css" />
+    <link rel="stylesheet" href="css/svg-animation.css" />
+    <style>
+      body {
+        background-color: #222a31 !important;
+      }
+    </style>
+  </head>
+
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+    <!--Include Js link-->
+    <script src="js/jquery-3.3.1.slim.min.js" />
+    <script src="js/bootstrap.bundle.min.js" />
+    <script src="js/plugins/flipclock.min.js" />
+    <script src="js/plugins/chart.min.js" />
+    <script src="js/plugins/owl.carousel.min.js" />
+    <script src="https:code.jquery.com/jquery-3.4.1min.js" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scroll/16.1.3/smooth-scroll.min.js"></script>
+    <script src="js/script.js" />
+    <script>
+      var scroll = new SmoothScroll('a[href*="#"]');
+
+      $(window)
+        .scroll(function () {
+          var windscroll = $(window).scrollTop();
+          if (windscroll >= 450) {
+            $("section").each(function (i) {
+              // The number at the end of the next line is how pany pixels you from the top you want it to activate.
+              if ($(this).position().top <= windscroll + 100) {
+                $(".navbar-collapse ul li.active").removeClass("active");
+                $(".navbar-collapse ul li").eq(i).addClass("active");
+              }
+            });
+          } else {
+            $(".navbar-collapse ul li.active").removeClass("active");
+            $(".navbar-collapse ul li:first").addClass("active");
+          }
+        })
+        .scroll();
+
+      var addClassOnScroll = function () {
+        var windowTop = $(window).scrollTop();
+        $("section[id]").each(function (index, elem) {
+          var offsetTop = $(elem).offset().top;
+          var outerHeight = $(this).outerHeight(true);
+          console.log(windowTop);
+          if (
+            windowTop > offsetTop - 50 &&
+            windowTop < offsetTop + outerHeight
+          ) {
+            var elemId = $(elem).attr("id");
+            $(".navbar-collapse ul li.active").removeClass("active");
+            $(".navbar-collapse ul li a[href='#" + elemId + "']")
+              .parent()
+              .addClass("active");
+          }
+        });
+      };
+
+      $(function () {
+        $(window).on("scroll", function () {
+          addClassOnScroll();
+        });
+      });
+
+      $(window).on("load", function () {
+        setTimeout(function () {
+          $(".cic-logo").addClass("cic-logo-animation"),
+            $(".svg-elements-1").addClass("svg-elements-1-animation"),
+            $(".svg-elements-2").addClass("svg-elements-2-animation");
+        }, 3e3);
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,13 @@
+//main net
+// export const environment = {
+//   REACT_APP_TOKEN_ADDRESS: "0x219440bb5e7af80f41b51aa6babe0ab002875168",
+//   REACT_APP_STAKE_ADDRESS: "0x3b829b6b888e99d1f9f5a6c5a1c8315d2604ca3c",
+//   defaultRefAddress: "0xDC2950eB8a76AC317D29125630Cf48c63327D388",
+// };
+
+//test net
+export const environment = {
+  REACT_APP_TOKEN_ADDRESS: "0xd64e362413782dcff36307702203facde7c9fa26",
+  REACT_APP_STAKE_ADDRESS: "0x6e98ac729E4A5621070894F51fd1fEa76a0AC96F",
+  defaultRefAddress: "0x31b165baB5b94e497CFA1EceF8260C5Fd0A3C146",
+};
